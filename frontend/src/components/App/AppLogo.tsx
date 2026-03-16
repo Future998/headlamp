@@ -19,7 +19,6 @@ import { SxProps } from '@mui/system';
 import React, { isValidElement, ReactElement } from 'react';
 import { getThemeName, useNavBarMode } from '../../lib/themes';
 import { useTypedSelector } from '../../redux/hooks';
-import OrchestraIcon from '../../resources/orchestra.svg?react';
 import { EmptyContent } from '../common';
 import ErrorBoundary from '../common/ErrorBoundary';
 
@@ -41,19 +40,9 @@ export type AppLogoType =
   | typeof React.Component
   | null;
 
-export default function OriginalAppLogo(props: AppLogoProps) {
-  const { logoType } = props;
-
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <OrchestraIcon style={{ width: 'auto', height: '32px' }} />
-      {logoType === 'large' && (
-        <span style={{ fontSize: '18px', fontWeight: 600, whiteSpace: 'nowrap' }}>
-          ALT Orchestra
-        </span>
-      )}
-    </div>
-  );
+// eslint-disable-next-line no-unused-vars
+export default function OriginalAppLogo(_props: AppLogoProps) {
+  return null;
 }
 
 export function AppLogo(props: AppLogoProps) {
