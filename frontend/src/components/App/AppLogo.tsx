@@ -19,10 +19,7 @@ import { SxProps } from '@mui/system';
 import React, { isValidElement, ReactElement } from 'react';
 import { getThemeName, useNavBarMode } from '../../lib/themes';
 import { useTypedSelector } from '../../redux/hooks';
-import LogoDark from '../../resources/icon-dark.svg?react';
-import LogoLight from '../../resources/icon-light.svg?react';
-import LogoWithTextDark from '../../resources/logo-dark.svg?react';
-import LogoWithTextLight from '../../resources/logo-light.svg?react';
+import OrchestraIcon from '../../resources/orchestra.svg?react';
 import { EmptyContent } from '../common';
 import ErrorBoundary from '../common/ErrorBoundary';
 
@@ -45,18 +42,18 @@ export type AppLogoType =
   | null;
 
 export default function OriginalAppLogo(props: AppLogoProps) {
-  const { logoType, themeName } = props;
+  const { logoType } = props;
 
-  const Component =
-    logoType === 'large'
-      ? themeName === 'dark'
-        ? LogoWithTextLight
-        : LogoWithTextDark
-      : themeName === 'dark'
-      ? LogoLight
-      : LogoDark;
-
-  return <Component style={{ width: 'auto', height: '32px' }} />;
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <OrchestraIcon style={{ width: 'auto', height: '32px' }} />
+      {logoType === 'large' && (
+        <span style={{ fontSize: '18px', fontWeight: 600, whiteSpace: 'nowrap' }}>
+          ALT Orchestra
+        </span>
+      )}
+    </div>
+  );
 }
 
 export function AppLogo(props: AppLogoProps) {
