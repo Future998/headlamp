@@ -23,8 +23,8 @@ const headlampClassicLightTheme: AppTheme = {
   sidebar: {
     background: '#242424',
     color: '#FFF',
-    selectedBackground: '#ebe811',
-    selectedColor: '#ebe811',
+    selectedBackground: '#6B5CE7',
+    selectedColor: '#6B5CE7',
     actionBackground: '#605e5c',
   },
   link: {
@@ -57,8 +57,8 @@ export const darkTheme: AppTheme = {
   sidebar: {
     background: '#252423',
     color: '#cdcdcd',
-    selectedBackground: '#f2e600',
-    selectedColor: '#f2e600',
+    selectedBackground: '#6B5CE7',
+    selectedColor: '#6B5CE7',
     actionBackground: '#1b1a19',
   },
   buttonTextTransform: 'none',
@@ -81,8 +81,8 @@ export const lightTheme: AppTheme = {
   sidebar: {
     background: '#f0f0f0',
     color: '#605e5c',
-    selectedBackground: '#f2e600',
-    selectedColor: '#292827',
+    selectedBackground: '#6B5CE7',
+    selectedColor: '#ffffff',
     actionBackground: '#414141',
   },
   navbar: {
